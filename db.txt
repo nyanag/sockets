@@ -1,0 +1,6 @@
+{'Name': 'Ana', 'Card_no': '123', 'Pin': '22', 'Balance': '221'}
+{'Name': 'qwerty', 'Card_no': '232', 'Pin': '11', 'Balance': '21'}
+{'Name': 'Anagha', 'Card_no': '343 232 32', 'Pin': '112', 'Balance': '2230'}
+{'Name': 'qwert', 'Card_no': '222', 'Pin': '2', 'Balance': '2121'}
+{'Name': 'Tarzan', 'Card_no': '2232', 'Pin': '122', 'Balance': '2200'}
+{'Name': 'Anay', 'Card_no': '23323', 'Pin': '1222', 'Balance': '200'}
