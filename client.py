@@ -6,21 +6,15 @@ TCP_IP = '127.0.0.1'
 TCP_PORT = 2000
 BUFFER_SIZE = 1024
 MESSAGE = "Hello, World!"
-#Get user details
-name = input('Enter your name - ')
-card_no = input('Enter your card number - ')
-pin = input('Enter your pin - ')
-balance = input('Enter your balance - ')
+print('Welcome to the ATM system')
 ask = input('Do you wish to withdraw? Y/N ')
 if(ask == 'Y'):
-    withdraw = input('Withdrawal amount - ')
+    card_no = input('Enter your card number - ')
+    pin = input('Enter your pin - ')
 
-send = {"w":withdraw, "b":balance}
+#Send data to the socket
+send = {"c":card_no, "p":pin}
 pickleData = pickle.dumps(send)
-data = {'Name': name, 'Card_no': card_no, 'Pin': pin, 'Balance': balance}
-database = open("db.txt", "a+")
-database.write(repr(data)+"\n")
-
 
 # Encode message string of Unicode format to UTF-8 format (Python uses this by default)
 BYTE_MESSAGE = pin.encode()
@@ -38,8 +32,21 @@ client_socket.send(pickleData)
 data = client_socket.recv(BUFFER_SIZE)
 # Decode message from UTF-8 to Unicode
 data = data.decode()
+if data == "Verified":
+    print("Your data has been verified!")
+    w = input("Enter the amount to withdraw - ")
+    wvalue = w.encode()
+    client_socket.send(wvalue)
+else:
+    print("Your data is not verified.")
+    
+# 4. Recieve data from socket
+data1 = client_socket.recv(BUFFER_SIZE)
+# Decode message from UTF-8 to Unicode
+data1 = data1.decode()
+print(data1)
+
 # 5. Close the socket
 client_socket.close()
 
-print(data)
 print("Socket closed")

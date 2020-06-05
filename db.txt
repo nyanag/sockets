@@ -4,3 +4,8 @@
 {'Name': 'qwert', 'Card_no': '222', 'Pin': '2', 'Balance': '2121'}
 {'Name': 'Tarzan', 'Card_no': '2232', 'Pin': '122', 'Balance': '2200'}
 {'Name': 'Anay', 'Card_no': '23323', 'Pin': '1222', 'Balance': '200'}
+{'Name': 'Shakira', 'Card_no': '123', 'Pin': '123', 'Balance': '223'}
+{'Name': 'Sha', 'Card_no': '234', 'Pin': '234', 'Balance': '333'}
+{'Name': 'Ananya ', 'Card_no': '222', 'Pin': '123', 'Balance': '2234'}
+{'Name': 'del', 'Card_no': '123', 'Pin': '123', 'Balance': '123'}
+
